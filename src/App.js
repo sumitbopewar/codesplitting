@@ -1,23 +1,9 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Lazy load components
-const Home = React.lazy(() => import("./Components/Home"));
-const About = React.lazy(() => import("./Components/About"));
-const Contact = React.lazy(() => import("./Components/Contact"));
+import React from 'react'
 
 function App() {
   return (
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Suspense>
-    </Router>
-  );
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
